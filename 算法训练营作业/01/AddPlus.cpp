@@ -14,16 +14,16 @@ using std::vector;
 class Solution{
     public:
         vector<int> AddPlus(vector<int> & digits){
-            int len=digits.size();
-            for(int i=len-1;i>-1;--i){
+            int len = digits.size();
+            for(int i = len-1; i >= 0; --i){
                 // if(digits[i]+1>9){
                 //     digits[i]=0;
                 // }else{
                 //     ++digits[i];
                 //     return digits;
                 // }
-                if(++digits[i]>9){
-                    digits[i]=0;
+                if(++digits[i] > 9){
+                    digits[i] = 0;
                 }else{
                     return digits;
                 }

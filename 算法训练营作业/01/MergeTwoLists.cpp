@@ -25,21 +25,21 @@ public:
 };
 
 ListNode * Solution::MergeTwoLists(ListNode *l1,ListNode *l2){
-    ListNode *res_list=new ListNode(-1);
-    ListNode *con_list=res_list;
-    while (nullptr!=l1&&nullptr!=l2)
+    ListNode *res_list = new ListNode(-1);
+    ListNode *con_list = res_list;
+    while (nullptr != l1 && nullptr != l2)
     {
-        if(l1->val<l2->val)
+        if(l1->val < l2->val)
         {
-            con_list->next=l1;
-            l1=l1->next;
+            con_list->next = l1;
+            l1 = l1->next;
         }
         else{
-            con_list->next=l2;
-            l2=l2->next;
+            con_list->next = l2;
+            l2 = l2->next;
         }
-        con_list=con_list->next;
+        con_list = con_list->next;
     }
-    con_list->next=nullptr!=l1?l1:l2;
+    con_list->next = nullptr!=l1?l1:l2;
     return res_list->next;    
 }
