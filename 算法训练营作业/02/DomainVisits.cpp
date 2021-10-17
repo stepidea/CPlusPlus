@@ -8,6 +8,7 @@ using namespace std;
 using std::vector;
 
 /*
+子域名访问计数：https://leetcode-cn.com/problems/subdomain-visit-count/
 将数组中的string按空格拆分为数字和域名存到cd数组中；
 再将域名按.进行拆分存放到domainArr数组中；
 将拆分后的domainArr信息从后往前组合存放到映射domianMap（记录对应的域名和次数）
@@ -26,14 +27,14 @@ public:
             int count = stoi(cd[0]);
             for(int i = domainArr.size()-1; i >=0 ; --i)
             {
-                subdomain = domainArr[i]+(subdomain.empty() ? "" : "." +subdomain );
+                subdomain = domainArr[i] + (subdomain.empty() ? "" : "." + subdomain);
                 domianMap[subdomain] += count;
             }
             subdomain = "";
         }
 
         vector<string> resDomain;
-        for (auto subStr : domianMap)
+        for (auto& subStr : domianMap)
         {            
             // cout<<to_string(subStr.second) + " " + subStr.first<<endl;
             resDomain.push_back(to_string(subStr.second) + " " + subStr.first);
