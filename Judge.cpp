@@ -1,26 +1,25 @@
 #include<iostream> 
 using namespace std; 
-//≈–∂œ‘™“Ù/∏®“Ù
 
 int main() { 
     char c;
     bool ischar; 
     int isLowercaseVowel,isUppercaseVowel;
-    cout<<" ‰»Î“ª∏ˆ◊÷ƒ∏£∫"; 
+    cout<<"ËØ∑ËæìÂÖ•‰∏Ä‰∏™Â≠óÊØçÔºö"; 
     cin>>c; 
     ischar=((c>='a'&&c<='z')||(c>='A'&&c<='Z'));
     if(ischar) {
-        // –°–¥◊÷ƒ∏‘™“Ù
-        isLowercaseVowel=(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'); 
-        // ¥Û–¥◊÷ƒ∏‘™“Ù
-        isUppercaseVowel=(c=='A'||c=='E'||c=='I'||c=='O'||c=='U');
-        // if ”Ôæ‰≈–∂œ
+        // ÂÖÉÈü≥Â∞èÂÜôÂ≠óÊØç
+        isLowercaseVowel = (c=='a'||c=='e'||c=='i'||c=='o'||c=='u'); 
+        // ÂÖÉÈü≥Â§ßÂÜôÂ≠óÊØç
+        isUppercaseVowel = (c=='A'||c=='E'||c=='I'||c=='O'||c=='U');
+        // if Êù°‰ª∂
         if(isLowercaseVowel||isUppercaseVowel)
-            cout<<c<<"  «‘™“Ù"; 
+            cout<<c<<" ÊòØÂÖÉÈü≥Â≠óÊØç"; 
         else 
-            cout<<c<<"  «∏®“Ù"; 
+            cout<<c<<" ‰∏çÊòØÂÖÉÈü≥Â≠óÊØç"; 
     } else {
-        cout<<" ‰»Îµƒ≤ª «◊÷ƒ∏°£"; 
+        cout<<"ËØ∑ËæìÂÖ•Â≠óÊØç"; 
     }
         
     return 0; 
