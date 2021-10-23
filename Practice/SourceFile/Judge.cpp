@@ -5,21 +5,21 @@ int main() {
     char c;
     bool ischar; 
     int isLowercaseVowel,isUppercaseVowel;
-    cout<<"è¯·è¾“å…¥ä¸€ä¸ªå­—æ¯ï¼š"; 
+    cout<<"ÇëÊäÈëÒ»¸ö×ÖÄ¸£º"; 
     cin>>c; 
     ischar=((c>='a'&&c<='z')||(c>='A'&&c<='Z'));
     if(ischar) {
-        // å…ƒéŸ³å°å†™å­—æ¯
+        // ÔªÒôÐ¡Ð´×ÖÄ¸
         isLowercaseVowel = (c=='a'||c=='e'||c=='i'||c=='o'||c=='u'); 
-        // å…ƒéŸ³å¤§å†™å­—æ¯
+        // ÔªÒô´óÐ´×ÖÄ¸
         isUppercaseVowel = (c=='A'||c=='E'||c=='I'||c=='O'||c=='U');
-        // if æ¡ä»¶
+        // if Ìõ¼þ
         if(isLowercaseVowel||isUppercaseVowel)
-            cout<<c<<" æ˜¯å…ƒéŸ³å­—æ¯"; 
+            cout<<c<<" ÊÇÔªÒô×ÖÄ¸"; 
         else 
-            cout<<c<<" ä¸æ˜¯å…ƒéŸ³å­—æ¯"; 
+            cout<<c<<" ²»ÊÇÔªÒô×ÖÄ¸"; 
     } else {
-        cout<<"è¯·è¾“å…¥å­—æ¯"; 
+        cout<<"ÇëÊäÈë×ÖÄ¸"; 
     }
         
     return 0; 

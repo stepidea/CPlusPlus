@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//C++ 瀹炰緥 - 鏍囧噯杈撳叆杈撳嚭
+//C++ 实例 - 标准输入输出
 int main(){
     int num;
     cout<<"Please Enter a number: ";

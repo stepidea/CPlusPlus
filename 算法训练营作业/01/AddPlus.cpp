@@ -4,11 +4,11 @@
 using std::vector;
 
 /*
-加一：https://leetcode-cn.com/problems/plus-one/
-从vector后面开始判断，
-加一是否大于9（即10），
-是的话该位置的值需要改为0，并进行前一位数字进行加一；
-否的话该位置直接加一并返回结果。
+��һ��https://leetcode-cn.com/problems/plus-one/
+��vector���濪ʼ�жϣ�
+��һ�Ƿ����9����10����
+�ǵĻ���λ�õ�ֵ��Ҫ��Ϊ0��������ǰһλ���ֽ��м�һ��
+��Ļ���λ��ֱ�Ӽ�һ�����ؽ����
 */
 
 class Solution{

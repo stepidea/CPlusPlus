@@ -8,11 +8,11 @@ using namespace std;
 using std::vector;
 
 /*
-å­åŸŸåè®¿é—®è®¡æ•°ï¼šhttps://leetcode-cn.com/problems/subdomain-visit-count/
-å°†æ•°ç»„ä¸­çš„stringæŒ‰ç©ºæ ¼æ‹†åˆ†ä¸ºæ•°å­—å’ŒåŸŸåå­˜åˆ°cdæ•°ç»„ä¸­ï¼›
-å†å°†åŸŸåæŒ‰.è¿›è¡Œæ‹†åˆ†å­˜æ”¾åˆ°domainArræ•°ç»„ä¸­ï¼›
-å°†æ‹†åˆ†åçš„domainArrä¿¡æ¯ä»åå¾€å‰ç»„åˆå­˜æ”¾åˆ°æ˜ å°„domianMapï¼ˆè®°å½•å¯¹åº”çš„åŸŸåå’Œæ¬¡æ•°ï¼‰
-æœ€åå°†domianMapè¿›è¡Œç»„åˆè¾“å‡º
+×ÓÓòÃû·ÃÎÊ¼ÆÊı£ºhttps://leetcode-cn.com/problems/subdomain-visit-count/
+½«Êı×éÖĞµÄstring°´¿Õ¸ñ²ğ·ÖÎªÊı×ÖºÍÓòÃû´æµ½cdÊı×éÖĞ£»
+ÔÙ½«ÓòÃû°´.½øĞĞ²ğ·Ö´æ·Åµ½domainArrÊı×éÖĞ£»
+½«²ğ·ÖºóµÄdomainArrĞÅÏ¢´ÓºóÍùÇ°×éºÏ´æ·Åµ½Ó³ÉädomianMap£¨¼ÇÂ¼¶ÔÓ¦µÄÓòÃûºÍ´ÎÊı£©
+×îºó½«domianMap½øĞĞ×éºÏÊä³ö
 */
 
 class DomainVisits {

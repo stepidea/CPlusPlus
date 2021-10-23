@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//C++ å®žä¾‹ - Hello World
+//C++ ÊµÀý - Hello World
 int main(){
     cout<<"This is my first C++ demo."<<endl;
     cout<<"Hello,World!"<<endl;

@@ -2,11 +2,11 @@
 
 using namespace std;
 
-//鎸囬拡璁块棶鏁扮粍
+//指针访问数组
 void ArrPointer(){
     int a[5] = {1,2,3,4,5};
     int *p = a;
-    cout << "鏁扮粍鐨勭涓�涓�硷細" << *p << endl;
+    cout << "数组的第一个值：" << *p << endl;
     for(int i = 0; i < 5; i++){
         cout << *p << endl;
         p++;

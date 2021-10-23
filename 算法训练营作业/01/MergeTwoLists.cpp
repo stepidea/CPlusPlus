@@ -9,11 +9,11 @@ struct ListNode{
 };
 
 /*
-åˆå¹¶ä¸¤ä¸ªæœ‰åºé“¾è¡¨ï¼šhttps://leetcode-cn.com/problems/merge-two-sorted-lists/
-éœ€è¦åˆ›å»ºä¸¤ä¸ªä¸´æ—¶æŒ‡é’ˆæŒ‡å‘åŒä¸€å¤„ï¼Œä¸€ä¸ªç”¨äºŽè¿”å›žç»“æžœresï¼Œä¸€ä¸ªç”¨äºŽè¿žæŽ¥æ•°æ®con
-æ¯”è¾ƒä¸¤ä¸ªä¼ å…¥çš„æœ‰åºé“¾è¡¨æŒ‡é’ˆä¸­çš„å€¼ï¼Œå°†å°çš„èµ‹å€¼ä¸ªä¸€ä¸ªconä¸´æ—¶æŒ‡é’ˆï¼Œ
-ç›´åˆ°å…¶ä¸­ä¸€ä¸ªæˆ–ä¸¤ä¸ªæœ‰åºæŒ‡é’ˆä¸ºç©ºï¼Œç›´æŽ¥è·³å‡ºå¾ªçŽ¯ï¼Œ
-å°†ä¸ä¸ºç©ºçš„æœ‰åºæŒ‡é’ˆç›´æŽ¥é™„åŠ åˆ°conä¸´æ—¶æŒ‡é’ˆnext,æž„æˆä¸€ä¸ªå®Œæ•´é“¾è¡¨
+ºÏ²¢Á½¸öÓÐÐòÁ´±í£ºhttps://leetcode-cn.com/problems/merge-two-sorted-lists/
+ÐèÒª´´½¨Á½¸öÁÙÊ±Ö¸ÕëÖ¸ÏòÍ¬Ò»´¦£¬Ò»¸öÓÃÓÚ·µ»Ø½á¹ûres£¬Ò»¸öÓÃÓÚÁ¬½ÓÊý¾Ýcon
+±È½ÏÁ½¸ö´«ÈëµÄÓÐÐòÁ´±íÖ¸ÕëÖÐµÄÖµ£¬½«Ð¡µÄ¸³Öµ¸öÒ»¸öconÁÙÊ±Ö¸Õë£¬
+Ö±µ½ÆäÖÐÒ»¸ö»òÁ½¸öÓÐÐòÖ¸ÕëÎª¿Õ£¬Ö±½ÓÌø³öÑ­»·£¬
+½«²»Îª¿ÕµÄÓÐÐòÖ¸ÕëÖ±½Ó¸½¼Óµ½conÁÙÊ±Ö¸Õënext,¹¹³ÉÒ»¸öÍêÕûÁ´±í
 */
 
 class Solution
