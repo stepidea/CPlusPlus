@@ -2,6 +2,8 @@
 #include <algorithm>
 #include <functional>
 #include <vector>
+#include <ctime>
+#include <numeric>
 
 using namespace std;
 
@@ -97,8 +99,10 @@ void test03(){
     } 
 }
 
-// transform 常用的排序算法
+// 常用的排序算法 sort、
 void test04(){
+    srand(unsigned(time(NULL)));
+
     vector<int> v;
     v.push_back(1);
     v.push_back(2);
@@ -106,18 +110,78 @@ void test04(){
     v.push_back(4);
     v.push_back(5);
     
-    vector<int> vTarget;
-    vTarget.resize(v.size());
-    transform(v.begin(),v.end(),vTarget.begin(),Transform());
+    //洗牌算法，打乱顺序
+    random_shuffle(v.begin(),v.end());
 
-    for_each(vTarget.begin(),vTarget.end(),print02());
+    for_each(v.begin(), v.end(), print02());
     cout << endl;
+
+    sort(v.begin(), v.end());
+    vector<int> v1;
+    v1.push_back(2);
+    v1.push_back(3);
+    v1.push_back(4);
+    v1.push_back(5);
+    v1.push_back(6);
+    //合并两个有序的序列，生成一个有序序列
+    vector<int> vTarget;
+    vTarget.resize(v.size() + v1.size());
+    merge(v.begin(), v.end(), v1.begin(), v1.end(), vTarget.begin());
+    for_each(vTarget.begin(), vTarget.end(), print02());
+}
+
+// 常用的算数生成算法 
+void test05(){
+
+    vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(5);
+    
+    int total = accumulate(v.begin(), v.end(), 0);
+    cout << total << endl;
+
+    vector<int> v1;
+    v1.resize(10);
+    fill(v1.begin(),v1.end(),100);
+    for_each(v1.begin(),v1.end(),print02());
+}
+
+// 常用的集合算法 ：需要有序
+void test06(){
+    vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(5);
+
+    vector<int> v1;
+    v1.push_back(2);
+    v1.push_back(3);
+    v1.push_back(4);
+    v1.push_back(5);
+    v1.push_back(6);
+    
+    vector<int> vTarget;
+    vTarget.resize(min(v.size(), v1.size()));
+    //求交集
+    auto itEnd = set_intersection(v.begin(), v.end(), v1.begin(), v1.end(), vTarget.begin());
+    for_each(vTarget.begin(), itEnd, print02());
+
+    //并集：set_union
+    //差集：set_difference
 }
 
 int main(){
     // test01();
     // test02();
-    test03();
+    // test03();
+    // test04();
+    // test05();
+    test06();
 
     return 0;
 }
