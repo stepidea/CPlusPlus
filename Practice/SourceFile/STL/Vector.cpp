@@ -104,12 +104,53 @@ void test04(){
     cout << endl << v.front() << endl;//Ê×¸öÔªËØ
     cout << v.back() << endl;//Ä©Î²ÔªËØ
 }
+//ÈÝÆ÷»¥»» swap
+void test05(){
+    vector<int> v1;
+    for (int i = 0; i < 10; i++)
+    {
+        v1.push_back(i);
+    }
+    vector<int> v2;
+    for (int i = 0; i < 5; i++)
+    {
+        v2.push_back(i);
+    }
+    printVector(v1);
+    printVector(v2);
+    
+    v1.swap(v2);
+    printVector(v1);
+    printVector(v2);
+}
+
+//reserve Ô¤Áô¿Õ¼ä
+void test06(){
+    vector<int> v1;
+
+    v1.reserve(100000);
+
+    int count=0;
+    int *p = nullptr;
+    for (int i = 0; i < 100000; i++)
+    {
+        v1.push_back(i);
+        if(p != &v1[0]){
+            ++count;
+            p = &v1[0];
+        }
+    }
+    cout << count <<endl;
+}
 
 int main(){
     //test01();
     //test02();
     //test03();
-    test04();
+    // test04();
+    // test05();
+    test06();
+
     system("pause");
 
     return 0;
