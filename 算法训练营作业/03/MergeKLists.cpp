@@ -13,8 +13,13 @@ struct ListNode {
 };
 
 /*
-合并K个有序链表：https://leetcode-cn.com/problems/merge-k-sorted-lists/
-分治实现
+合并K个有序链表（分治实现）：https://leetcode-cn.com/problems/merge-k-sorted-lists/
+假设数组中有3个有序的链表：（下面数字代表对应链表的索引）
+1、[划分链表]，将3个链表划分为（0、1）a链表组和（2）b链表组;
+2、[由于a链表中有两个链表]，将a链表划分为（0）c链表和（1）d链表;
+3、[链表合并是一个链表与另一个链表进行合并，故需要将上面的链表组拆分为单个]，即可将单个链表作为递归的终止条件，方便后面合并操作;
+4、[c链表和d链表都是只有一个链表]，直接调用合并两个有序链表的方法将c和d变成一个链表a;
+5、[a链表和b链表都是只有一个链表]，再直接调用合并两个有序链表的方法将a和b变成一个链表返回。
 */
 
 class Solution {
@@ -37,7 +42,7 @@ public:
         }      
         return merge(lists, 0, lists.size() - 1);
     }
-    ListNode* merge(vector <ListNode*> &lists, int l, int r) {
+    ListNode* merge(vector<ListNode*> &lists, int l, int r) {
         if (l == r) return lists[l];
         // if (l > r) return nullptr;
         int mid = (l + r) >> 1;
