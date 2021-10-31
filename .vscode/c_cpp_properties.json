@@ -1,7 +1,22 @@
 {
     "configurations": [
+        // {
+        //     "name": "Win32",
+        //     "includePath": [
+        //         "${workspaceFolder}/**"
+        //     ],
+        //     "defines": [
+        //         "_DEBUG",
+        //         "UNICODE",
+        //         "_UNICODE"
+        //     ],
+        //     "cStandard": "c11",
+        //     "cppStandard": "c++17",
+        //     "intelliSenseMode": "windows-gcc-x64",
+        //     "compilerPath": "D:\\tool\\mingw-w64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+        // }
         {
-            "name": "Win32",
+            "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
@@ -10,10 +25,13 @@
                 "UNICODE",
                 "_UNICODE"
             ],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "D:\\tool\\mingw-w64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe"
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang"
         }
     ],
     "version": 4
