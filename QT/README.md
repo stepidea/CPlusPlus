@@ -1,4 +1,4 @@
-# Qt 简要概括
+# Qt视频： https://www.bilibili.com/video/BV1g4411H78N?p=1
 
 * Qt 简介
     + 跨平台图形界面引擎
@@ -18,7 +18,7 @@
     + 点击创建项目后，选择项目路径（不能有中文）以及给项目起名称（名称不能有中文、空格）
     + 默认创建有窗口类，myWidget，基类有三种选择：QWidget、QMainWindow、QDialog
     + main 函数
-        - Q
+        - 
         - QApplication 应用程序对象，有且只有一个
         - myWidget w 实例化窗口对象
         - w.show() 调用show函数，显示窗口
