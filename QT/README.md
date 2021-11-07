@@ -133,5 +133,14 @@
         - QDialog *dlg = new QDialog(this)
         - dlg->show();
         - dlg->setAttribute(Qt::WA_DeleteOnClose); 55号属性
+    + 标准对话框 - 消息对话框
+        - QMessageBox 静态成员函数 创建对话框
+        - 错误、信息、 提问、警告
+        - 参数（父亲， 标题， 显示内容， 按键类型， 默认关联回车按键）
+        - 返回值也是 StandardButton 类型，利用返回值判断用户的输入
+    + 其他标准对话框
+        - 颜色对话框 QColorDialog::getClor
+        - 文件对话框 QFileDialog::getOpenFileName(父亲，标题，默认路径，过滤文件)
+        - 字体对话框 QFontDialog::getFont
 
 * 
