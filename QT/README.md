@@ -143,4 +143,21 @@
         - 文件对话框 QFileDialog::getOpenFileName(父亲，标题，默认路径，过滤文件)
         - 字体对话框 QFontDialog::getFont
 
-* 
+* 界面布局
+    + 实现登陆窗口
+    + 利用布局方式 给窗口进行美化
+    + 选取 widget 进行布局，水平布局，垂直布局，栅格布局
+    + 给用户名、密码、登陆、退出进行布局
+    + 默认窗口和控件之间有9间隙，可以调整 layoutLeftMargin
+    + 利用弹簧进行布局
+
+* 控件
+    + 按钮组
+        - QPushButton 常用按钮
+        - QToolButton 工具按钮，用于显示图片，若图想显示文字，需要修改风格 toolButtonStyle 凸起风格 autoRaise
+        - radioButton 单选按钮，设置默认 ui->BtnMan->setChecked(true)
+        - checkbox 多选按钮，监听状态，2 选中，1 半选，0 未选中
+    +
+
+    
+
