@@ -157,7 +157,18 @@
         - QToolButton 工具按钮，用于显示图片，若图想显示文字，需要修改风格 toolButtonStyle 凸起风格 autoRaise
         - radioButton 单选按钮，设置默认 ui->BtnMan->setChecked(true)
         - checkbox 多选按钮，监听状态，2 选中，1 半选，0 未选中
-    +
-
-    
-
+    + QListWidget 列表容器
+        - QListWidgetItem *item 一行内容
+        - ui->listWidget->addItem(item)
+        - 设置居中方式 item->setTextAlignment(Qt::AlignHCenter)
+        - 可以利用 addItems 一次性添加整个诗内容
+    + QTreeWidget 树控件
+        - 设置头 ui->treeWidget->setHeaderLabels(QStringList()<<"first"<<"second");
+        - 创建根节点 QTreeWidgetItem *item = new QTreeWidgetItem(QStringList()<<"first");
+        - 添加根节点到树控件上 ui->treeWidget->addTopLevelItem(item);
+        - 添加子节点 item->addChild(child);
+    + TableWidget 表格控件
+        - 设置列数 ui->tableWidget->setColumnCount(2)
+        - 设置水平表头 ui->tableWidget->setHorizontalHeaderLabels()<<<<"first"<<"second";
+        - 设置行数 ui->tableWidget->setRowCount(2)
+        - 设置正文 ui->tableWidget->setItem(0,0,new QTableWidgetItem(""))
