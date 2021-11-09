@@ -172,3 +172,17 @@
         - 设置水平表头 ui->tableWidget->setHorizontalHeaderLabels()<<<<"first"<<"second";
         - 设置行数 ui->tableWidget->setRowCount(2)
         - 设置正文 ui->tableWidget->setItem(0,0,new QTableWidgetItem(""))
+    + 其他控件介绍
+        - stackedWidget 栈控件 ui->stackedWidget->setCurrentIndex(1);
+        - 下拉框 ui->comboBox->addItem("");
+        - QLabel 显示图片 ui->lbl_Image->setPixmap(":/Image/butt.png")
+        - QLabel 显示动图 gif 图片: ui->lbl_movie->setMovie(movie); movie->start();
+
+* 自定义控件封装
+    + 添加新文件 - Qt - 设计师界面 （.h .cpp .ui）
+    + ui 中设计 QSpinBox 和 QSlider 两个控件
+    + Widget 中使用自定义控件，拖一个 Widget ，点击添加，点击提升
+    + 实现功能，改变数字，滑动条跟着移动，信号槽监听
+    + 提供 getNum 和 setNum 对外接口
+    + 测试接口
+     
