@@ -185,4 +185,39 @@
     + 实现功能，改变数字，滑动条跟着移动，信号槽监听
     + 提供 getNum 和 setNum 对外接口
     + 测试接口
-     
+    
+* Qt 中的事件
+    + 鼠标事件
+    + 鼠标进入事件 enterEvent
+    + 鼠标离开事件 leaveEvent
+    + 鼠标按下 mousePressEvent(QMouseEvent ev)
+    + 鼠标释放 mouseReleaseEvent
+    + 鼠标移动 mouseMoveEvent
+    + ev->x() x坐标， ev->y() y坐标
+    + ev.button() 可以判断所有按键 Qt::LeftButton 
+    + ev.buttons() 判断组合按键 判断 move 时候的左右键，结合 & 操作符
+    + 格式化字符串 QString("%1 %2").arg("").arg("")
+
+* 定时器1
+    + 利用事件 void timeEvent(QTimeEvent *ev)
+    + 启动定时器 startTime(1000) 毫秒单位
+    + timeEvent 的返回值是定时器的唯一标识，可以通过 ev->timeId 获得
+* 定时器2
+    + 利用定时器类 QTimer
+    + 创建定时器对象 QTimer * time = new QTimer(this)
+    + 启动定时器 time->start(ms)
+    + 每隔一定毫秒，发送信号 timeout ，进行监听
+    + 暂停 timer->stop()
+
+* event 事件
+    + 用途：用于事件的分发
+    + 也可以做拦截操作，不建议
+    + bool event(QEvent e)
+    + 返回值 如果是 true 代表用户处理这个事件，不向下分发
+    + e->type() == 鼠标按下 ... 事件
+
+* 事件过滤器
+    + 在程序将事件分发到事件分发器前，可以利用过滤器做拦截
+    + 步骤：
+        - 给控件安装事件过滤器
+        - 重写 eventFiler 函数
