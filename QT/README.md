@@ -221,3 +221,37 @@
     + 步骤：
         - 给控件安装事件过滤器
         - 重写 eventFiler 函数
+
+* QPainter 绘图
+    + 绘图事件 void paintEvent()
+    + 声明一个画家对象 QPainter paint(this) this 指定绘图设备
+    + 画线 画圆 画矩形 画文字
+    + 设置画笔 QPen 及宽度、风格
+    + 设置画刷 QBrush 及风格
+* 高级设置
+    + 抗锯齿 效率低 painter.setRenderHint(QPainter::Antialiasing);
+    + 对画家进行移动
+        - painter.translate(100,0)
+        - 保存状态 save
+        - 还原状态 restore
+    + 如果想收到调用绘图事件 利用 update
+    + 利用画家画图片 painter.drawPixmap(x,y,QPixmap("path"))
+
+* QPainterDevice 绘图设备
+    + QPixmap QImage QBitmap(黑白色) QPicture QWidget 
+    + QPixmap 对不同平台做了显示优化
+        - QPixmap pix(300, 300)
+        - pix.fill(color)
+        - 利用画家往 pix 上画画 QPainter painter(&pix)
+        - 保存 pix.save(path)
+    + QImage 可以对像素进行访问
+        - QImage img(300,300,QImage::Format_RGB32)
+        - 其他流程和 QPixmap 一样
+        - 可以对像素进行修改 painter.setPixel(i,i,value)
+    + QPicture 记录和重现绘图指令
+        - QPicture pic
+        - painter.begin(&pic)
+        - 保存 pic.save(任意后缀名)
+        - 重现 利用画家可以重现 painter.drawPicture(0,0,pic)
+
+* 
