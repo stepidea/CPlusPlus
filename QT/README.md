@@ -254,4 +254,22 @@
         - 保存 pic.save(任意后缀名)
         - 重现 利用画家可以重现 painter.drawPicture(0,0,pic)
 
-* 
+* QFile 对文件进行读写操作
+    + QFile 进行读写操作
+    + QFile file(path)
+    + 读
+        - file.open(QIODevice::readOnly)
+        - 全部读取 file.readAll() 按行读 file.readLine() atend()判断是否读到文件尾
+        - 默认支持的编码方式 UTF8
+        - 利用编码格式类 指定格式 QTextCodec *c = QTextCodec::codeForName("gbk");
+        - ui->textEdit->setText(codec->toUnicode(array))
+        - 关闭文件对象 close
+    + 写
+        - file.open(QIODevice::writeOnly | Append)
+        - file.write(content)
+        - file.close 关闭
+
+* QFileInfo 读取文件信息
+    + QFileInfo info(path)
+    + 大小、后缀名、名称、路径、日期
+    
