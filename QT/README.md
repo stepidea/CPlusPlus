@@ -272,4 +272,5 @@
 * QFileInfo 读取文件信息
     + QFileInfo info(path)
     + 大小、后缀名、名称、路径、日期
-    
+
+
