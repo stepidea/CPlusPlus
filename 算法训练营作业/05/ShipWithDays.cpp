@@ -44,10 +44,6 @@ public:
             }
             curWeight += weight;
         }
-        if(needDay <= day)
-        {
-            return true;
-        }
-        return false;
+        return needDay <= day;
     }
 };
