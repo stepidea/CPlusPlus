@@ -8,7 +8,7 @@ using namespace std;
  * @brief 
  * 
  * 在D天内送达包裹的能力：https://leetcode-cn.com/problems/capacity-to-ship-packages-within-d-days/solution/zai-d-tian-nei-song-da-bao-guo-de-neng-l-ntml/
- * 
+ * 使用二分搜索进行判定推选出最靠近、最合适的值
  */
 
 class Solution {

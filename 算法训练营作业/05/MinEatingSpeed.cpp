@@ -7,6 +7,7 @@ using namespace std;
 /*
  * @brief 
  * 七尺香蕉的珂珂:https://leetcode-cn.com/problems/koko-eating-bananas/
+ * 使用二分搜索进行判定推选出最靠近、最合适的值
  */
 
 class Solution {
